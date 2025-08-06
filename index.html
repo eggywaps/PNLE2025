@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>PNLE 2025</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <ul>
+        <li class="home-active"><a href="#home">Home</a></li>
+        <li><a href="#subjects">Subjects</a></li>
+      </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <main>
+      <section class="home-page" id="home">
+        <div class="profile-img">
+          <img src="img/profile.jpg" alt="Profile Image">
+        </div>
+        <div class="home-info">
+          <h1>MANIFESTING</h1>
+          <h2>Sharlene May C. Lopez, RN</h2>
+        </div>
+      </section>
+    
+
+      <!-- Subjects Section -->
+
+      <section class="subjects-page" id="subjects">
+        <div class="subjects-container">
+          <h2>Review Materials</h2>
+          <div class="subjects-grid">
+
+            <!--PEDIA Subject Card-->
+            <div class="subject-card">
+              <div class="subject-icon">👶</div>
+              <h3>PEDIA</h3>
+              <p>Pediatric Nursing Review Materials</p>
+              <a href="#pedia-categories" class="open-subject-btn">View Categories</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--PEDIA Categories Modal-->
+      <div id="pedia-categories" class="categories-modal">
+        <div class="categories-modal-content">
+          <div class="categories-header">
+            <h3>PEDIA - Categories</h3>
+            <a href="#" class="close-btn">✖️</a>
+          </div>
+          <div class="categories-container">
+
+            <!--Lecture Category-->
+            <div class="category-card">
+              <div class="category-icon">📚</div>
+              <h4>Lecture</h4>
+              <p>PEDIA lecture notes and presentations</p>
+              <a href="#pedia-lecture-pdf" class="category-btn available">Open PDF</a>
+            </div>
+
+            <!--WORKBOOK CATEGORY ON GOING-->
+            <div class="category-card disabled">
+              <div class="category-icon">📝</div>
+                <h4>Workbook</h4>
+                <p>Interactive exercises and activities</p>
+                <span class="category-btn unavailable">Coming Soon</span>
+            </div>
+
+            <!--Review Module Category-->
+            <div class="category-card">
+              <div class="category-icon">📖</div>
+              <h4>Review Module</h4>
+              <p>Comprehensive review materials</p>
+              <a href="pdfs/6 Pedia.pdf" class="category-btn available">Open PDF</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+              <!-- PDF Modals for each category -->
+              <!-- PEDIA Lecture PDF Modal -->
+            <div id="pedia-lecture-pdf" class="pdf-modal">
+              <div class="pdf-modal-content">
+                <div class="pdf-header">
+                  <h3>PEDIA - Lecture</h3>
+                  <div class="pdf-nav">
+                    <a href="#pedia-categories" class="back-btn">← Back to Categories</a>
+                    <a href="#" class="close-btn">✖️</a>
+                  </div>
+                </div>
+                <div class="pdf-container">
+                  <iframe src="pdfs/pedia-lecture.pdf" width="100%" height="100%"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- PEDIA Review Module PDF Modal -->
+            <div id="pedia-review-pdf" class="pdf-modal">
+          <div class="pdf-modal-content">
+            <div class="pdf-header">
+              <h3>PEDIA - Review Module</h3>
+              <div class="pdf-nav">
+                <a href="#pedia-categories" class="back-btn">← Back to Categories</a>
+                <a href="#" class="close-btn">✖️</a>
+              </div>
+            </div>
+            <div class="pdf-container">
+              <iframe src="pdfs/pedia-review.pdf" width="100%" height="100%"></iframe>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

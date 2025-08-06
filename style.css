@@ -1,0 +1,714 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy:wght@300;400;500;600;700;800;900&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+a{
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-image: url("img/bg3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.navbar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 9%;
+  z-index: 100;
+  background-color: rgb(134, 57, 83);
+}
+
+.navbar .logo{
+  font-size: 24px;
+  font-weight: 900;
+  color: whitesmoke;
+  text-decoration: none;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.navbar ul{
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.navbar ul li{
+  list-style: none;
+  margin-left: 35px;
+}
+
+.navbar ul li a{
+  color: whitesmoke;
+  text-decoration: none;
+  font-weight: 500;
+  transition: .5s;
+  font-size: 20px;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.navbar ul li a:hover{
+  color: pink;
+  text-decoration: underline;
+  transition: .3s;
+}
+
+
+.home-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  height: 100vh;
+  padding: 60px 9% 0;
+}
+
+.profile-img {
+  background: white;
+  padding: 15px 15px 50px 15px; /* Extra padding at bottom for Polaroid look */
+  box-shadow: 
+    0 8px 16px rgba(0, 0, 0, 0.3),
+    0 0 30px 5px rgba(255, 181, 199, 0.6),
+    0 0 60px 10px rgba(236, 59, 127, 0.3); /* Keep your pink glow but softer */
+  transform: rotate(-2deg); /* Slight rotation for authentic Polaroid feel */
+  display: inline-block;
+  border-radius: 0; /* Remove border radius for Polaroid look */
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.profile-img:hover {
+  transform: rotate(0deg) scale(1.02);
+  box-shadow: 
+    0 12px 24px rgba(0, 0, 0, 0.4),
+    0 0 40px 8px rgba(255, 181, 199, 0.8),
+    0 0 80px 15px rgba(236, 59, 127, 0.4);
+}
+
+.profile-img img{
+  width: 350px;
+  height: 400px; /* Slightly shorter to accommodate Polaroid bottom */
+  object-fit: cover;
+  display: block;
+  border-radius: 0; /* Remove border radius */
+  box-shadow: none; /* Remove individual image shadow */
+  transition: none; /* Remove transition from img */
+  margin: 0;
+}
+
+.profile-img::after {
+  content: "Future RN ✨";
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #666;
+  text-shadow: none;
+}
+
+.home-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100vh;
+  margin-left: 0;
+}
+
+
+.home-info{
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.home-info h1{
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-shadow: 
+    0 0 3px #0000007a,
+    0 0 6px #00000017,
+    0 0 9px #00000079;
+  color: white;
+  margin: 0;
+  font-family: "Luckiest Guy", sans-serif;
+  animation: bounce 2s infinite;
+  
+}
+
+@keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+.home-info h2{
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+  margin-top: 20px;
+  font-family: "Luckiest Guy", sans-serif;
+  text-shadow: 
+    0 0 3px #0000007a,
+    0 0 6px #00000017,
+    0 0 9px #00000079;
+}
+
+/* Subjects Section */
+.subjects-section {
+  padding: 80px 9% 60px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.subjects-container h2 {
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  font-family: "Luckiest Guy", sans-serif;
+  margin-bottom: 50px;
+  text-shadow: 
+    0 0 3px #0000007a,
+    0 0 6px #00000017,
+    0 0 9px #00000079;
+}
+
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Subject Cards */
+.subject-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(236, 59, 127, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.subject-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(236, 59, 127, 0.5);
+}
+
+.subject-icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.subject-card h3 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 700;
+}
+
+.subject-card p {
+  color: #666;
+  font-size: 16px;
+  font-family: "Lexend Deca", sans-serif;
+  margin-bottom: 25px;
+}
+
+.open-subject-btn {
+  display: inline-block;
+  background: linear-gradient(45deg, #ff6b9d, #c44569);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(236, 59, 127, 0.3);
+}
+
+.open-subject-btn:hover {
+  background: linear-gradient(45deg, #c44569, #ff6b9d);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(236, 59, 127, 0.4);
+  color: white;
+}
+
+/* Categories Modal */
+.categories-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.categories-modal:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.categories-modal-content {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.categories-modal:target .categories-modal-content {
+  transform: scale(1);
+}
+
+.categories-header {
+  background: rgb(134, 57, 83);
+  color: white;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.categories-header h3 {
+  margin: 0;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 24px;
+}
+
+.categories-container {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  height: calc(100% - 80px);
+  overflow-y: auto;
+}
+
+/* Category Cards */
+.category-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid rgba(236, 59, 127, 0.2);
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.category-card:not(.disabled):hover {
+  transform: translateY(-5px);
+  border-color: rgba(236, 59, 127, 0.5);
+  box-shadow: 0 10px 25px rgba(236, 59, 127, 0.2);
+}
+
+.category-card.disabled {
+  opacity: 0.6;
+  background: rgba(200, 200, 200, 0.3);
+}
+
+.category-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.category-card h4 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 10px;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 600;
+}
+
+.category-card p {
+  color: #666;
+  font-size: 14px;
+  font-family: "Lexend Deca", sans-serif;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.category-btn {
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.category-btn.available {
+  background: linear-gradient(45deg, #ff6b9d, #c44569);
+  color: white;
+}
+
+.category-btn.available:hover {
+  background: linear-gradient(45deg, #c44569, #ff6b9d);
+  transform: translateY(-2px);
+  color: white;
+}
+
+.category-btn.unavailable {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+/* PDF Modal */
+.pdf-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1100;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.pdf-modal:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.pdf-modal-content {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  width: 94%;
+  height: 94%;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.pdf-modal:target .pdf-modal-content {
+  transform: scale(1);
+}
+
+.pdf-header {
+  background: rgb(134, 57, 83);
+  color: white;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pdf-header h3 {
+  margin: 0;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 20px;
+}
+
+.pdf-nav {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.back-btn, .close-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.back-btn:hover, .close-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  transform: scale(1.05);
+}
+
+.pdf-container {
+  height: calc(100% - 60px);
+  overflow: auto;
+}
+
+.pdf-container iframe {
+  border: none;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .subjects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .categories-container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .categories-modal-content, .pdf-modal-content {
+    top: 2%;
+    left: 2%;
+    width: 96%;
+    height: 96%;
+  }
+  
+  .pdf-nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .back-btn, .close-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+/* iPad Specific Styles */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Navbar adjustments for iPad */
+  .navbar {
+    padding: 25px 6%;
+  }
+  
+  .navbar .logo {
+    font-size: 26px;
+  }
+  
+  .navbar ul li a {
+    font-size: 18px;
+  }
+  
+  /* Home section for iPad */
+  .home-page {
+    gap: 40px;
+    padding: 70px 6% 0;
+  }
+  
+  .profile-img {
+    padding: 18px 18px 55px 18px;
+  }
+  
+  .profile-img img {
+    width: 320px;
+    height: 400px;
+  }
+  
+  .home-info h1 {
+    font-size: 45px;
+    letter-spacing: 4px;
+  }
+  
+  .home-info h2 {
+    font-size: 28px;
+  }
+  
+  /* Subjects grid for iPad */
+  .subjects-section {
+    padding: 70px 6% 50px;
+  }
+  
+  .subjects-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns sa iPad */
+    gap: 25px;
+    max-width: 800px;
+  }
+  
+  .subject-card {
+    padding: 28px;
+  }
+  
+  .subject-card h3 {
+    font-size: 26px;
+  }
+  
+  .subject-icon {
+    font-size: 45px;
+  }
+  
+  /* Categories modal for iPad */
+  .categories-modal-content {
+    top: 8%;
+    left: 8%;
+    width: 84%;
+    height: 84%;
+  }
+  
+  .categories-container {
+    padding: 35px;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns para sa categories */
+    gap: 25px;
+  }
+  
+  .category-card {
+    padding: 20px;
+  }
+  
+  .category-icon {
+    font-size: 35px;
+  }
+  
+  .category-card h4 {
+    font-size: 20px;
+  }
+  
+  /* PDF viewer for iPad */
+  .pdf-modal-content {
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+  }
+  
+  .pdf-header {
+    padding: 18px 25px;
+  }
+  
+  .pdf-header h3 {
+    font-size: 22px;
+  }
+}
+
+/* iPad Portrait specific (768px width) */
+@media screen and (width: 768px) and (orientation: portrait) {
+  .home-page {
+    flex-direction: column;
+    gap: 35px;
+    text-align: center;
+  }
+  
+  .subjects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .categories-container {
+    grid-template-columns: 1fr; /* Single column sa portrait */
+  }
+}
+
+/* iPad Landscape specific (1024px width) */
+@media screen and (width: 1024px) and (orientation: landscape) {
+  .home-page {
+    gap: 50px;
+  }
+  
+  .subjects-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns sa landscape */
+  }
+  
+  .categories-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Touch-friendly improvements for iPad */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Larger touch targets */
+  .open-subject-btn, .category-btn.available {
+    padding: 15px 35px;
+    font-size: 16px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .close-btn, .back-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Improved hover states for touch */
+  .subject-card:hover,
+  .category-card:not(.disabled):hover {
+    transform: scale(1.02);
+  }
+  
+  /* Better scroll areas */
+  .pdf-container {
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling sa iOS */
+  }
+  
+  .categories-container {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Specific iPad Pro adjustments */
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+  .subjects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1000px;
+  }
+  
+  .categories-container {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 40px;
+  }
+  
+  .home-info h1 {
+    font-size: 55px;
+  }
+  
+  .profile-img img {
+    width: 380px;
+    height: 450px;
+  }
+}

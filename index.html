@@ -33,16 +33,89 @@
 
       <section class="subjects-page" id="subjects">
         <div class="subjects-container">
-          <h2>Review Materials</h2>
+          <h2>REVIEW MATERIALS</h2>
           <div class="subjects-grid">
 
             <!--PEDIA Subject Card-->
             <div class="subject-card">
-              <div class="subject-icon">👶</div>
+              <div class="baby-icon">👶🏻</div>
               <h3>PEDIA</h3>
               <p>Pediatric Nursing</p>
               <a href="#pedia-categories" class="open-subject-btn">View Materials</a>
             </div>
+
+            <!--FUNDA Subject Card-->
+            <div class="subject-card">
+              <div class="funda-icon">🔎</div>
+              <h3>FUNDA</h3>
+              <p>Fundamentals of Nursing</p>
+              <a href="#funda-categories" class="open-subject-btn">View Materials</a>
+            </div>
+
+            <!--CARDIO Subject Card-->
+            <div class="subject-card">
+              <div class="cardio-icon">🫀</div>
+              <h3>CARDIO</h3>
+              <p>Cardiovascular System</p>
+              <a href="#cardio-categories" class="open-subject-btn">View Materials</a>
+            </div>
+
+            <!--NEURO Subject Card-->
+            <div class="subject-card">
+              <div class="neuro-icon">🧠</div>
+              <h3>NEURO</h3>
+              <p>Neurologic System</p>
+              <a href="#neuro-categories" class="open-subject-btn">View Materials</a>
+            </div>
+
+            <!--PHARMA Subject Card-->
+            <div class="subject-card">
+              <div class="pharma-icon">💊</div>
+              <h3>PHARMA</h3>
+              <p>Pharmacology</p>
+              <a href="#pharma-categories" class="open-subject-btn">View Materials</a>
+            </div>
+
+            <!--SENSES Subject Card-->
+            <div class="subject-card">
+              <div class="senses-icon">👂🏻</div>
+              <h3>SENSES</h3>
+              <p>Eyes and Ears</p>
+              <a href="#senses-categories" class="open-subject-btn">View Materials</a>
+            </div>
+
+            <!--CDN Subject Card-->
+            <div class="subject-card">
+              <div class="cdn-icon">🦠</div>
+              <h3>CDN</h3>
+              <p>Communicable Disease Nursing</p>
+              <a href="#cdn-categories" class="open-subject-btn">View Materials</a>
+            </div>
+
+            <!--GERIA Subject Card-->
+            <div class="subject-card">
+              <div class="geria-icon">👵🏻</div>
+              <h3>GERIA</h3>
+              <p>Geriatric</p>
+              <a href="#geria-categories" class="open-subject-btn">View Materials</a>
+            </div>
+
+             <!--OB Subject Card-->
+            <div class="subject-card">
+              <div class="ob-icon">🤰🏻</div>
+              <h3>OB</h3>
+              <p>Obstetric Nursing</p>
+              <a href="#ob-categories" class="open-subject-btn">View Materials</a>
+            </div>
+            
+            <!--PLMAR Subject Card-->
+            <div class="subject-card">
+              <div class="plmar-icon">📋</div>
+              <h3>PLMAR</h3>
+              <p>Professional Adjustment, Leadership and Management</p>
+              <a href="#ob-categories" class="open-subject-btn">View Materials</a>
+            </div>
+
           </div>
         </div>
       </section>
@@ -51,17 +124,17 @@
       <div id="pedia-categories" class="categories-modal">
         <div class="categories-modal-content">
           <div class="categories-header">
-            <h3>PEDIA - Categories</h3>
-            <a href="#" class="close-btn">✖️</a>
+            <h3>Pedia Materials</h3>
+            <a href="#subjects" class="close-btn">❌</a>
           </div>
           <div class="categories-container">
 
             <!--Lecture Category-->
-            <div class="category-card">
+            <div class="category-card disabled">
               <div class="category-icon">📚</div>
               <h4>Lecture</h4>
-              <p>PEDIA lecture notes and presentations</p>
-              <a href="#pedia-lecture-pdf" class="category-btn available">Open PDF</a>
+              <p>Lecture notes and Presentations</p>
+              <span class="category-btn unavailable">Coming Soon</span>
             </div>
 
             <!--WORKBOOK CATEGORY ON GOING-->
@@ -82,6 +155,41 @@
           </div>
         </div>
       </div>
+      <!--FUNDA Categories Modal-->
+      <div id="funda-categories" class="categories-modal">
+        <div class="categories-modal-content">
+          <div class="categories-header">
+            <h3>Funda Materials</h3>
+            <a href="#subjects" class="close-btn">❌</a>
+          </div>
+          <div class="categories-container">
+
+            <!--Lecture Category-->
+            <div class="category-card disabled">
+              <div class="category-icon">📚</div>
+              <h4>Lecture</h4>
+              <p>Lecture notes and Presentations</p>
+              <span class="category-btn unavailable">Coming Soon</span>
+            </div>
+
+            <!--WORKBOOK CATEGORY ON GOING-->
+            <div class="category-card disabled">
+              <div class="category-icon">📝</div>
+                <h4>Workbook</h4>
+                <p>Interactive exercises and activities</p>
+                <span class="category-btn unavailable">Coming Soon</span>
+            </div>
+
+            <!--Review Module Category-->
+            <div class="category-card">
+              <div class="category-icon">📖</div>
+              <h4>Review Module</h4>
+              <p>Comprehensive review materials</p>
+              <a href="pdfs/1 Fundamentals of Nursing-unlocked.pdf" target="_blank" class="category-btn available">Open PDF</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
               <!-- PDF Modals for each category -->
               <!-- PEDIA Lecture PDF Modal -->
@@ -95,25 +203,59 @@
                   </div>
                 </div>
                 <div class="pdf-container">
-                  <iframe src="pdfs/pedia-lecture.pdf" width="100%" height="100%"></iframe>
+                  <iframe src="pdfs/pedia-review.pdf" width="100%" height="100%"></iframe>
           </div>
         </div>
       </div>
 
-      <!-- PEDIA Review Module PDF Modal -->
-            <div id="pedia-review-pdf" class="pdf-modal">
-          <div class="pdf-modal-content">
-            <div class="pdf-header">
-              <h3>PEDIA - Review Module</h3>
-              <div class="pdf-nav">
-                <a href="#pedia-categories" class="back-btn">← Back to Categories</a>
-                <a href="#" class="close-btn">✖️</a>
+              <!-- PEDIA Review Module PDF Modal -->
+                <div id="pedia-review-pdf" class="pdf-modal">
+                  <div class="pdf-modal-content">
+                    <div class="pdf-header">
+                      <h3>PEDIA - Review Module</h3>
+                      <div class="pdf-nav">
+                        <a href="#pedia-categories" class="back-btn">← Back to Categories</a>
+                        <a href="#" class="close-btn">✖️</a>
+                      </div>
+                    </div>
+                    <div class="pdf-container">
+                      <iframe src="pdfs/pedia-review.pdf" width="100%" height="100%"></iframe>
+                  </div>
+                </div>
+
+              <!--PDF Modal for each category-->
+              <!--FUNDA Lecture PDF Modal-->
+              <div id="funda-lecture-pdf" class="pdf-modal">
+                <div class="pdf-modal-content">
+                  <div class="pdf-header">
+                    <h3>FUNDA - Lecture</h3>
+                    <div class="pdf-nav">
+                      <a href="#funda-categories" class="back-btn">← Back to Categories</a>
+                      <a href="#" class="close-btn">✖️</a>
+                    </div>
+                  </div>
+                  <div class="pdf-container">
+                    <iframe src="pdfs/funda-review.pdf" width="100%" height="100%"></iframe>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="pdf-container">
-              <iframe src="pdfs/pedia-review.pdf" width="100%" height="100%"></iframe>
+
+              <!--FUNDA Review Module PDF Modal-->
+                <div id="funda-review-pdf" class="pdf-modal">
+                  <div class="pdf-modal-content">
+                    <div class="pdf-header">
+                      <h3>FUNDA -  Review Module</h3>
+                      <div class="pdf-nav">
+                        <a href="#funda-categories" class="back-btn">← Back to Categories</a>
+                        <a href="#" class="close-btn">✖️</a>
+                      </div>
+                    </div>
+                    <div class="pdf-container">
+                      <iframe src="pdfs/funda-review.pdf" width="100%" height="100%"></iframe>
+                    </div>
+                  </div>
+
           </div>
-        </div>
       </div>
     </main>
   </body>

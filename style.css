@@ -925,3 +925,327 @@ body{
     -webkit-overflow-scrolling: touch;
   }
 }
+
+/* ===============================================
+   LAPTOP MEDIA QUERIES FOR PNLE 2025
+   =============================================== */
+
+/* Small Laptops (1024px - 1366px) */
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+  
+  /* Navbar adjustments */
+  .navbar {
+    padding: 25px 7%;
+    height: 55px;
+  }
+  
+  .navbar ul {
+    gap: 35px;
+  }
+  
+  .navbar ul li a {
+    font-size: 19px;
+  }
+
+  /* Home page layout */
+  .home-page {
+    gap: 50px;
+    padding: 70px 7% 0;
+  }
+  
+  .profile-img img {
+    width: 320px;
+    height: 380px;
+  }
+  
+  .home-content {
+    width: 90vh;
+  }
+  
+  .home-info h1 {
+    font-size: 45px;
+    letter-spacing: 4px;
+  }
+  
+  .home-info h2 {
+    font-size: 28px;
+  }
+
+  /* Subjects section */
+  .subjects-section {
+    padding: 70px 7% 50px;
+  }
+  
+  .subjects-container {
+    padding-top: 150px;
+  }
+  
+  .subjects-container h2 {
+    font-size: 38px;
+  }
+  
+  .subjects-grid {
+    grid-template-columns: repeat(5, minmax(200px, 220px)); /* Maintain 5 columns */
+    gap: 25px;
+    max-width: 1150px;
+  }
+  
+  .subject-card {
+    padding: 25px;
+  }
+  
+  .subject-card h3 {
+    font-size: 26px;
+  }
+  
+  .subject-card p {
+    font-size: 15px;
+  }
+  
+  .baby-icon,
+  .funda-icon,
+  .cardio-icon,
+  .neuro-icon,
+  .pharma-icon,
+  .senses-icon,
+  .cdn-icon,
+  .geria-icon,
+  .ob-icon,
+  .plmar-icon,
+  .chn-icon,
+  .git-icon,
+  .ortho-icon,
+  .psych-icon,
+  .endo-icon,
+  .hema-icon,
+  .renal-icon,
+  .erdn-icon,
+  .periop-icon,
+  .respi-icon {
+    font-size: 45px;
+    margin-bottom: 18px;
+  }
+
+  /* Modal adjustments */
+  .categories-modal-content {
+    top: 6%;
+    left: 6%;
+    width: 88%;
+    height: 88%;
+  }
+  
+  .categories-container {
+    padding: 35px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+  
+  .category-card {
+    padding: 22px;
+  }
+  
+  .category-card h4 {
+    font-size: 21px;
+  }
+
+  /* PDF Modal */
+  .pdf-modal-content {
+    top: 4%;
+    left: 4%;
+    width: 92%;
+    height: 92%;
+  }
+}
+
+/* Medium Laptops (1367px - 1440px) */
+@media screen and (min-width: 1367px) and (max-width: 1440px) {
+  
+  .navbar {
+    padding: 28px 8%;
+  }
+  
+  .navbar ul {
+    gap: 38px;
+  }
+  
+  .home-page {
+    gap: 55px;
+    padding: 75px 8% 0;
+  }
+  
+  .profile-img img {
+    width: 340px;
+    height: 390px;
+  }
+  
+  .home-info h1 {
+    font-size: 48px;
+  }
+  
+  .home-info h2 {
+    font-size: 29px;
+  }
+  
+  .subjects-section {
+    padding: 75px 8% 55px;
+  }
+  
+  .subjects-container {
+    padding-top: 170px;
+  }
+  
+  .subjects-grid {
+    grid-template-columns: repeat(5, minmax(220px, 240px));
+    gap: 28px;
+    max-width: 1250px;
+  }
+  
+  .subject-card {
+    padding: 28px;
+  }
+  
+  .subject-card h3 {
+    font-size: 27px;
+  }
+  
+  .baby-icon,
+  .funda-icon,
+  .cardio-icon,
+  .neuro-icon,
+  .pharma-icon,
+  .senses-icon,
+  .cdn-icon,
+  .geria-icon,
+  .ob-icon,
+  .plmar-icon,
+  .chn-icon,
+  .git-icon,
+  .ortho-icon,
+  .psych-icon,
+  .endo-icon,
+  .hema-icon,
+  .renal-icon,
+  .erdn-icon,
+  .periop-icon,
+  .respi-icon {
+    font-size: 48px;
+  }
+}
+
+/* Large Laptops (1441px - 1680px) */
+@media screen and (min-width: 1441px) and (max-width: 1680px) {
+  
+  .navbar {
+    padding: 30px 8.5%;
+  }
+  
+  .home-page {
+    gap: 60px;
+    padding: 80px 8.5% 0;
+  }
+  
+  .profile-img img {
+    width: 350px;
+    height: 400px;
+  }
+  
+  .home-info h1 {
+    font-size: 50px;
+    letter-spacing: 5px;
+  }
+  
+  .home-info h2 {
+    font-size: 30px;
+  }
+  
+  .subjects-section {
+    padding: 80px 8.5% 60px;
+  }
+  
+  .subjects-container {
+    padding-top: 180px;
+  }
+  
+  .subjects-container h2 {
+    font-size: 40px;
+  }
+  
+  .subjects-grid {
+    grid-template-columns: repeat(5, minmax(240px, 260px));
+    gap: 30px;
+    max-width: 1400px;
+  }
+  
+  .subject-card {
+    padding: 30px;
+  }
+  
+  .subject-card h3 {
+    font-size: 28px;
+  }
+  
+  .subject-card p {
+    font-size: 16px;
+  }
+  
+  .baby-icon,
+  .funda-icon,
+  .cardio-icon,
+  .neuro-icon,
+  .pharma-icon,
+  .senses-icon,
+  .cdn-icon,
+  .geria-icon,
+  .ob-icon,
+  .plmar-icon,
+  .chn-icon,
+  .git-icon,
+  .ortho-icon,
+  .psych-icon,
+  .endo-icon,
+  .hema-icon,
+  .renal-icon,
+  .erdn-icon,
+  .periop-icon,
+  .respi-icon {
+    font-size: 50px;
+  }
+  
+  .categories-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .pdf-modal-content {
+    top: 3%;
+    left: 3%;
+    width: 94%;
+    height: 94%;
+  }
+}
+
+/* Ultra-wide Laptops (1681px - 1919px) - Bridge to Desktop */
+@media screen and (min-width: 1681px) and (max-width: 1919px) {
+  
+  .subjects-grid {
+    grid-template-columns: repeat(5, minmax(280px, 300px));
+    gap: 30px;
+    max-width: 1600px;
+  }
+  
+  .subject-card {
+    padding: 30px;
+  }
+  
+  .home-page {
+    padding: 85px 9% 0;
+  }
+  
+  .subjects-section {
+    padding: 85px 9% 65px;
+  }
+  
+  .subjects-container {
+    padding-top: 200px;
+  }
+}

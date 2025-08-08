@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 html{
   scroll-behavior: smooth;
@@ -9,6 +11,7 @@ html{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
 }
 
 
@@ -24,7 +27,7 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .navbar{
@@ -39,14 +42,6 @@ body{
   padding: 30px 9%;
   z-index: 100;
   background-color: rgb(134, 57, 83);
-}
-
-.navbar .logo{
-  font-size: 24px;
-  font-weight: 900;
-  color: whitesmoke;
-  text-decoration: none;
-  font-family: "Lexend Deca", sans-serif;
 }
 
 .navbar ul{
@@ -176,14 +171,19 @@ body{
   font-weight: 500;
   color: white;
   margin-top: 20px;
-  font-family: "Luckiest Guy", sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-shadow: 
     0 0 3px #0000007a,
     0 0 6px #00000017,
     0 0 9px #00000079;
 }
 
+
 /* Subjects Section */
+.subjects-container{
+  padding-top: 200px;
+}
+
 .subjects-section {
   padding: 80px 9% 60px;
   background: rgba(255, 255, 255, 0.1);
@@ -194,7 +194,7 @@ body{
   text-align: center;
   font-size: 40px;
   color: white;
-  font-family: "Luckiest Guy", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 50px;
   text-shadow: 
     0 0 3px #0000007a,
@@ -204,10 +204,12 @@ body{
 
 .subjects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(5, minmax(310px, 220px)); /* Fixed size columns */
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
+  justify-content: center; /* Center the grid */
+  
 }
 
 /* Subject Cards */
@@ -227,7 +229,17 @@ body{
   box-shadow: 0 15px 35px rgba(236, 59, 127, 0.5);
 }
 
-.subject-icon {
+/* ICON SETTINGS */
+.baby-icon,
+.funda-icon,
+.cardio-icon,
+.neuro-icon,
+.pharma-icon,
+.senses-icon,
+.cdn-icon,
+.geria-icon,
+.ob-icon,
+.plmar-icon {
   font-size: 50px;
   margin-bottom: 20px;
 }
@@ -485,100 +497,118 @@ body{
   display: block;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .subjects-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .categories-container {
-    grid-template-columns: 1fr;
-    padding: 20px;
-    gap: 20px;
-  }
-  
-  .categories-modal-content, .pdf-modal-content {
-    top: 2%;
-    left: 2%;
-    width: 96%;
-    height: 96%;
-  }
-  
-  .pdf-nav {
-    flex-direction: column;
-    gap: 8px;
-  }
-  
-  .back-btn, .close-btn {
-    padding: 6px 12px;
-    font-size: 12px;
-  }
-}
+/* ===============================================
+   MEDIA QUERIES FOR IPAD AIR 5 & IPHONE 16 PRO
+   =============================================== */
 
-/* iPad Specific Styles */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  /* Navbar adjustments for iPad */
+/* iPad Air 5 - Portrait (820x1180) */
+@media screen and (min-width: 768px) and (max-width: 834px) and (orientation: portrait) {
+  
+  /* Navbar adjustments */
   .navbar {
-    padding: 25px 6%;
+    padding: 20px 5%;
+    height: 60px;
   }
   
-  .navbar .logo {
-    font-size: 26px;
+  .navbar ul {
+    gap: 25px;
+  }
+  
+  .navbar ul li {
+    margin-left: 20px;
   }
   
   .navbar ul li a {
     font-size: 18px;
   }
-  
-  /* Home section for iPad */
+
+  /* Home page layout */
   .home-page {
+    flex-direction: column;
     gap: 40px;
-    padding: 70px 6% 0;
+    padding: 80px 5% 20px;
+    text-align: center;
   }
   
   .profile-img {
-    padding: 18px 18px 55px 18px;
+    order: 1;
+    margin-bottom: 20px;
   }
   
   .profile-img img {
-    width: 320px;
-    height: 400px;
+    width: 280px;
+    height: 320px;
+  }
+  
+  .home-content {
+    order: 2;
+    width: 100%;
+    margin-left: 0;
   }
   
   .home-info h1 {
-    font-size: 45px;
-    letter-spacing: 4px;
+    font-size: 42px;
+    letter-spacing: 3px;
   }
   
   .home-info h2 {
-    font-size: 28px;
+    font-size: 26px;
+  }
+
+  /* Subjects section */
+  .subjects-section {
+    padding: 60px 5% 40px;
   }
   
-  /* Subjects grid for iPad */
-  .subjects-section {
-    padding: 70px 6% 50px;
+  .subjects-container {
+    padding-top: 120px;
+  }
+  
+  .subjects-container h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
   }
   
   .subjects-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns sa iPad */
-    gap: 25px;
-    max-width: 800px;
+    grid-template-columns: repeat(5, minmax(140px, 1fr)); /* Keep 5 columns, smaller cards */
+    gap: 15px;
+    max-width: 100%;
   }
   
   .subject-card {
-    padding: 28px;
+    padding: 15px; /* Smaller padding for compact 5-column layout */
   }
   
   .subject-card h3 {
-    font-size: 26px;
+    font-size: 18px; /* Smaller font for compact layout */
+    margin-bottom: 10px;
   }
-  
-  .subject-icon {
-    font-size: 45px;
+
+  .subject-card p {
+    font-size: 14px;
+    margin-bottom: 15px;
   }
-  
-  /* Categories modal for iPad */
+
+  .baby-icon,
+  .funda-icon,
+  .cardio-icon,
+  .neuro-icon,
+  .pharma-icon,
+  .senses-icon,
+  .cdn-icon,
+  .geria-icon,
+  .ob-icon,
+  .plmar-icon {
+    font-size: 35px; /* Smaller icons for compact layout */
+    margin-bottom: 10px;
+  }
+
+  .open-subject-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  /* Modal adjustments */
   .categories-modal-content {
     top: 8%;
     left: 8%;
@@ -587,128 +617,302 @@ body{
   }
   
   .categories-container {
-    padding: 35px;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns para sa categories */
-    gap: 25px;
+    padding: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* iPad Air 5 - Landscape (1180x820) */
+@media screen and (min-width: 1024px) and (max-width: 1180px) and (orientation: landscape) {
+  
+  .navbar {
+    padding: 25px 6%;
+  }
+  
+  .home-page {
+    gap: 80px;
+    padding: 70px 6% 0;
+  }
+  
+  .profile-img img {
+    width: 320px;
+    height: 380px;
+  }
+  
+  .home-info h1 {
+    font-size: 46px;
+  }
+  
+  .subjects-grid {
+    grid-template-columns: repeat(5, minmax(180px, 1fr)); /* Keep 5 columns, slightly larger for landscape */
+    max-width: 1100px;
+    gap: 20px;
+  }
+  
+  .categories-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* iPhone 16 Pro - Portrait (393x852) */
+@media screen and (max-width: 430px) and (orientation: portrait) {
+  
+  /* Navbar mobile */
+  .navbar {
+    padding: 15px 4%;
+    height: 50px;
+  }
+  
+  .navbar ul {
+    gap: 15px;
+  }
+  
+  .navbar ul li {
+    margin-left: 10px;
+  }
+  
+  .navbar ul li a {
+    font-size: 14px;
+  }
+
+  /* Home page mobile */
+  .home-page {
+    flex-direction: column;
+    gap: 30px;
+    padding: 70px 4% 20px;
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .profile-img {
+    transform: rotate(-1deg);
+    padding: 10px 10px 35px 10px;
+  }
+  
+  .profile-img img {
+    width: 240px;
+    height: 280px;
+  }
+  
+  .profile-img::after {
+    font-size: 14px;
+    bottom: 10px;
+  }
+  
+  .home-content {
+    width: 100%;
+  }
+  
+  .home-info {
+    max-width: 100%;
+  }
+  
+  .home-info h1 {
+    font-size: 32px;
+    letter-spacing: 2px;
+  }
+  
+  .home-info h2 {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  /* Subjects section mobile */
+  .subjects-section {
+    padding: 40px 4% 30px;
+  }
+  
+  .subjects-container {
+    padding-top: 80px;
+  }
+  
+  .subjects-container h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .subjects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 100%;
+  }
+  
+  .subject-card {
+    padding: 20px;
+    margin: 0 10px;
+  }
+  
+  .subject-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+  
+  .subject-card p {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .baby-icon,
+  .funda-icon,
+  .cardio-icon,
+  .neuro-icon,
+  .pharma-icon,
+  .senses-icon,
+  .cdn-icon,
+  .geria-icon,
+  .ob-icon,
+  .plmar-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+
+  /* Modal mobile */
+  .categories-modal-content {
+    top: 5%;
+    left: 2%;
+    width: 96%;
+    height: 90%;
+  }
+  
+  .categories-header {
+    padding: 15px 20px;
+  }
+  
+  .categories-header h3 {
+    font-size: 20px;
+  }
+  
+  .categories-container {
+    padding: 20px;
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
   
   .category-card {
     padding: 20px;
   }
   
-  .category-icon {
-    font-size: 35px;
-  }
-  
   .category-card h4 {
     font-size: 20px;
   }
   
-  /* PDF viewer for iPad */
+  .category-card p {
+    font-size: 13px;
+  }
+
+  /* PDF Modal mobile */
   .pdf-modal-content {
+    top: 2%;
+    left: 2%;
+    width: 96%;
+    height: 96%;
+  }
+  
+  .pdf-header {
+    padding: 12px 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .pdf-header h3 {
+    font-size: 16px;
+  }
+  
+  .back-btn, .close-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .pdf-container {
+    height: calc(100% - 50px);
+  }
+}
+
+/* iPhone 16 Pro - Landscape (852x393) */
+@media screen and (max-width: 852px) and (max-height: 430px) and (orientation: landscape) {
+  
+  .navbar {
+    padding: 10px 4%;
+    height: 45px;
+  }
+  
+  .navbar ul li a {
+    font-size: 13px;
+  }
+  
+  .home-page {
+    flex-direction: row;
+    gap: 30px;
+    padding: 60px 4% 10px;
+    height: 100vh;
+  }
+  
+  .profile-img img {
+    width: 200px;
+    height: 240px;
+  }
+  
+  .home-info h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+  
+  .home-info h2 {
+    font-size: 18px;
+  }
+  
+  .subjects-container {
+    padding-top: 60px;
+  }
+  
+  .subjects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .subject-card {
+    padding: 15px;
+  }
+  
+  .categories-modal-content {
     top: 5%;
     left: 5%;
     width: 90%;
     height: 90%;
   }
   
-  .pdf-header {
-    padding: 18px 25px;
-  }
-  
-  .pdf-header h3 {
-    font-size: 22px;
-  }
-}
-
-/* iPad Portrait specific (768px width) */
-@media screen and (width: 768px) and (orientation: portrait) {
-  .home-page {
-    flex-direction: column;
-    gap: 35px;
-    text-align: center;
-  }
-  
-  .subjects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .categories-container {
-    grid-template-columns: 1fr; /* Single column sa portrait */
-  }
-}
-
-/* iPad Landscape specific (1024px width) */
-@media screen and (width: 1024px) and (orientation: landscape) {
-  .home-page {
-    gap: 50px;
-  }
-  
-  .subjects-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns sa landscape */
-  }
-  
   .categories-container {
     grid-template-columns: repeat(3, 1fr);
+    padding: 15px;
   }
 }
 
-/* Touch-friendly improvements for iPad */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  /* Larger touch targets */
-  .open-subject-btn, .category-btn.available {
-    padding: 15px 35px;
+/* Additional responsive improvements for better mobile experience */
+@media screen and (max-width: 480px) {
+  
+  /* Ensure touch-friendly interaction */
+  .open-subject-btn,
+  .category-btn.available {
+    padding: 15px 25px;
     font-size: 16px;
-    min-height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height: 44px; /* iOS recommended touch target */
   }
   
-  .close-btn, .back-btn {
-    padding: 12px 20px;
-    font-size: 16px;
+  /* Improve modal close buttons for touch */
+  .back-btn, .close-btn {
     min-height: 44px;
-    min-width: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 10px 20px;
   }
   
-  /* Improved hover states for touch */
-  .subject-card:hover,
-  .category-card:not(.disabled):hover {
-    transform: scale(1.02);
+  /* Better spacing for small screens */
+  .subject-card:hover {
+    transform: translateY(-5px) scale(1.01); /* Reduce scale to prevent layout issues */
   }
   
-  /* Better scroll areas */
+  /* Ensure proper scrolling on iOS */
+  .categories-container,
   .pdf-container {
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling sa iOS */
-  }
-  
-  .categories-container {
     -webkit-overflow-scrolling: touch;
-  }
-}
-
-/* Specific iPad Pro adjustments */
-@media screen and (min-width: 1024px) and (max-width: 1366px) {
-  .subjects-grid {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 1000px;
-  }
-  
-  .categories-container {
-    grid-template-columns: repeat(3, 1fr);
-    padding: 40px;
-  }
-  
-  .home-info h1 {
-    font-size: 55px;
-  }
-  
-  .profile-img img {
-    width: 380px;
-    height: 450px;
   }
 }

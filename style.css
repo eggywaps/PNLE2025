@@ -60,13 +60,12 @@ body{
   text-decoration: none;
   font-weight: 500;
   transition: .5s;
-  font-size: 20px;
+  font-size: 25px;
   font-family: "Lexend Deca", sans-serif;
 }
 
 .navbar ul li a:hover{
   color: pink;
-  text-decoration: underline;
   transition: .3s;
 }
 
@@ -178,10 +177,9 @@ body{
     0 0 9px #00000079;
 }
 
-
 /* Subjects Section */
 .subjects-container{
-  padding-top: 200px;
+  padding-top: 150px;
 }
 
 .subjects-section {
@@ -239,10 +237,21 @@ body{
 .cdn-icon,
 .geria-icon,
 .ob-icon,
-.plmar-icon {
+.plmar-icon,
+.chn-icon,
+.git-icon,
+.ortho-icon,
+.psych-icon,
+.endo-icon,
+.hema-icon,
+.renal-icon,
+.erdn-icon,
+.periop-icon,
+.respi-icon {
   font-size: 50px;
   margin-bottom: 20px;
 }
+
 
 .subject-card h3 {
   font-size: 28px;

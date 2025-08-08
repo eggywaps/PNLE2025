@@ -607,7 +607,17 @@ body{
   .cdn-icon,
   .geria-icon,
   .ob-icon,
-  .plmar-icon {
+  .plmar-icon,
+  .chn-icon,
+  .git-icon,
+  .ortho-icon,
+  .psych-icon,
+  .endo-icon,
+  .hema-icon,
+  .renal-icon,
+  .erdn-icon,
+  .periop-icon,
+  .respi-icon {
     font-size: 35px; /* Smaller icons for compact layout */
     margin-bottom: 10px;
   }
@@ -933,6 +943,13 @@ body{
 /* Small Laptops (1024px - 1366px) */
 @media screen and (min-width: 1024px) and (max-width: 1366px) {
   
+  /* Body adjustments */
+  body {
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+  }
+  
   /* Navbar adjustments */
   .navbar {
     padding: 25px 7%;
@@ -1060,6 +1077,13 @@ body{
 /* Medium Laptops (1367px - 1440px) */
 @media screen and (min-width: 1367px) and (max-width: 1440px) {
   
+  /* Body adjustments */
+  body {
+    background-size: cover;
+    background-position: center top;
+    background-attachment: scroll;
+  }
+  
   .navbar {
     padding: 28px 8%;
   }
@@ -1134,6 +1158,13 @@ body{
 
 /* Large Laptops (1441px - 1680px) */
 @media screen and (min-width: 1441px) and (max-width: 1680px) {
+  
+  /* Body adjustments */
+  body {
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed; /* Can use fixed for larger screens */
+  }
   
   .navbar {
     padding: 30px 8.5%;
@@ -1226,6 +1257,13 @@ body{
 
 /* Ultra-wide Laptops (1681px - 1919px) - Bridge to Desktop */
 @media screen and (min-width: 1681px) and (max-width: 1919px) {
+  
+  /* Body adjustments */
+  body {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
   
   .subjects-grid {
     grid-template-columns: repeat(5, minmax(280px, 300px));

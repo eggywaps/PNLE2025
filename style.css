@@ -26,8 +26,8 @@ body{
   background-image: url("img/bg3.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  background-attachment: scroll;
+  background-position: center top;
+  background-attachment: fixed;
 }
 
 .navbar{

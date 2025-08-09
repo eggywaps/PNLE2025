@@ -421,90 +421,6 @@ body{
   cursor: not-allowed;
 }
 
-/* PDF Modal */
-.pdf-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 1100;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-}
-
-.pdf-modal:target {
-  opacity: 1;
-  visibility: visible;
-}
-
-.pdf-modal-content {
-  position: absolute;
-  top: 3%;
-  left: 3%;
-  width: 94%;
-  height: 94%;
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  transform: scale(0.8);
-  transition: transform 0.3s ease;
-}
-
-.pdf-modal:target .pdf-modal-content {
-  transform: scale(1);
-}
-
-.pdf-header {
-  background: rgb(134, 57, 83);
-  color: white;
-  padding: 15px 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.pdf-header h3 {
-  margin: 0;
-  font-family: "Lexend Deca", sans-serif;
-  font-size: 20px;
-}
-
-.pdf-nav {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-
-.back-btn, .close-btn {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  padding: 8px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  font-family: "Lexend Deca", sans-serif;
-}
-
-.back-btn:hover, .close-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-  color: white;
-  transform: scale(1.05);
-}
-
-.pdf-container {
-  height: calc(100% - 60px);
-  overflow: auto;
-}
-
-.pdf-container iframe {
-  border: none;
-  display: block;
-}
 
 /* ===============================================
    MEDIA QUERIES FOR IPAD AIR 5 & IPHONE 16 PRO
@@ -781,7 +697,17 @@ body{
   .cdn-icon,
   .geria-icon,
   .ob-icon,
-  .plmar-icon {
+  .plmar-icon,
+  .chn-icon,
+  .git-icon,
+  .ortho-icon,
+  .psych-icon,
+  .endo-icon,
+  .hema-icon,
+  .renal-icon,
+  .erdn-icon,
+  .periop-icon,
+  .respi-icon  {
     font-size: 40px;
     margin-bottom: 15px;
   }
@@ -819,32 +745,10 @@ body{
   .category-card p {
     font-size: 13px;
   }
-
-  /* PDF Modal mobile */
-  .pdf-modal-content {
-    top: 2%;
-    left: 2%;
-    width: 96%;
-    height: 96%;
-  }
   
-  .pdf-header {
-    padding: 12px 15px;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .pdf-header h3 {
-    font-size: 16px;
-  }
-  
-  .back-btn, .close-btn {
+  .close-btn {
     padding: 6px 12px;
     font-size: 12px;
-  }
-  
-  .pdf-container {
-    height: calc(100% - 50px);
   }
 }
 
@@ -919,7 +823,7 @@ body{
   }
   
   /* Improve modal close buttons for touch */
-  .back-btn, .close-btn {
+  .close-btn {
     min-height: 44px;
     padding: 10px 20px;
   }
@@ -930,8 +834,7 @@ body{
   }
   
   /* Ensure proper scrolling on iOS */
-  .categories-container,
-  .pdf-container {
+  .categories-container {
     -webkit-overflow-scrolling: touch;
   }
 }
@@ -1063,14 +966,6 @@ body{
   
   .category-card h4 {
     font-size: 21px;
-  }
-
-  /* PDF Modal */
-  .pdf-modal-content {
-    top: 4%;
-    left: 4%;
-    width: 92%;
-    height: 92%;
   }
 }
 
@@ -1245,13 +1140,6 @@ body{
   .categories-container {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-  }
-  
-  .pdf-modal-content {
-    top: 3%;
-    left: 3%;
-    width: 94%;
-    height: 94%;
   }
 }
 
